@@ -22,10 +22,9 @@ class Face:
         self.frame_content.pack()
         Button(self.frame_content , text ="Set Face ID",command=self.Extract,width=20).grid(row =7,column=6,padx=5 ,pady=5,sticky='e')
         Button(self.frame_content , text ="Face Scanning",command =self.Recognize,width=20).grid(row = 8,column=6,padx=5 ,pady=5,sticky='w')
-        Button(self.frame_content , text ="Quit",command =master.destroy,width=20).grid(row = 9,column=6,padx=5 ,pady=5,sticky='w')
-        Del = Button(self.frame_content , text ="Delete Data" , command=self.Delete)
-        Del.grid(row = 15,column=6,padx=5 ,sticky='w')
-
+        Del = Button(self.frame_content , text ="Erase All Data" , command=self.Delete,width=20)
+        Del.grid(row = 9,column=6,padx=5 ,sticky='w')
+        Button(self.frame_content , text ="Quit",command =master.destroy,width=20).grid(row = 15,column=6,padx=5 ,pady=5,sticky='w')
 
         self.load_data()
     def SubmitId(self):
